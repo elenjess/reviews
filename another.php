@@ -29,17 +29,17 @@ echo $data->shopOpinions->total;
     if( $val->visibility == 'ANONYMOUS' ) $author = 'Анонимный комментарий'; //проверяем анонимный ли пользователь или нет
     else $author = $val->author;
  
-    if( $val->pro ) $pro = "<b>Достоинства:</b><br />".$val->pro."<br /><br />";
-    else $pro = "";
-    if( $val->contra ) $contra = "<b>Недостатки:</b><br />".$val->contra."<br /><br />";
-    else $contra = "";
+    if( $val->pros ) $pros = "<b>Достоинства:</b><br />" . $val->pros . "<br /><br />";
+    else $pros = "";
+    if( $val->cons ) $cons = "<b>Недостатки:</b><br />" . $val->cons . "<br /><br />";
+    else $cons = "";
     if( $val->text ) $text = "<b>Комментарий:</b><br />".$val->text;
     else $text = "";
  
  
- echo $author;
- echo $date;
- echo $pro.$contra.$text;
+ echo $author. "<br /><br />";
+ echo $date .  "<br /><br />";
+ echo $pros . $cons . $text;
 
 var_dump($data);
 ?>    
